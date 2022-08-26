@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  height: 100vh;
+}
+.slider-container {
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+.left-slide {
+  height: 100%;
+  width: 35%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.5s ease-in-out;
+}
+.left-slide > div {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+.left-slide h2 {
+  font-size: 32px;
+  margin-top: -30px;
+  margin-bottom: 8px;
+  font-weight: 400;
+}
+.right-slide {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 35%;
+  width: 65%;
+  transition: transform 0.5s ease-in-out;
+}
+.right-slide > div {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 100%;
+  width: 100%;
+}
+.red {
+  background-color: #d00012;
+}
+.blue {
+  background-color: #3ca9c1;
+}
+.green {
+  background-color: #64a62e;
+}
+.yellow {
+  background-color: #f6b400;
+}
+.white {
+  background-color: #d5dbe7;
+  color: #070707 !important;
+}
+.redPic {
+  background-image: url("img/pic01.jpg");
+}
+.bluePic {
+  background-image: url("img/pic02.jpg");
+}
+.greenPic {
+  background-image: url("img/pic03.jpg");
+}
+.yellowPic {
+  background-image: url("img/pic04.jpg");
+}
+.whitePic {
+  background-image: url("img/pic05.jpg");
+}
+button {
+  background-color: white;
+  border: none;
+  color: #aaa;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 15px;
+}
+.slider-container .action-buttons button:hover {
+  color: #222;
+  opacity: 1;
+  transition: ease-in-out all 0.2s;
+}
+.slider-container .action-buttons button:focus {
+  outline: none;
+}
+.slider-container .action-buttons button {
+  position: absolute;
+  left: 35%;
+  top: 50%;
+  z-index: 100;
+  opacity: 0.9;
+}
+.slider-container .action-buttons .down-button {
+  transform: translateX(-100%);
+  border-bottom-left-radius: 5px;
+}
+.slider-container .action-buttons .up-button {
+  transform: translateY(-100%);
+  border-top-right-radius: 5px;
+}
